@@ -1,0 +1,45 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: etl_mysql_db
+    restart: always
+
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: etl_db
+
+    ports:
+      - "3307:3306"
+
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot_password"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+  etl-pipeline:
+    build: .
+    container_name: etl_pipeline_runner
+
+    depends_on:
+      db:
+        condition: service_healthy
+
+    environment:
+      ETL_DB_USER: root
+      ETL_DB_PASSWORD: root_password
+      ETL_DB_HOST: db
+      ETL_DB_PORT: 3306
+      ETL_DB_NAME: etl_db
+
+    volumes:
+      - ./logs:/app/logs
+
+    restart: on-failure
+
+volumes:
+  mysql_data:

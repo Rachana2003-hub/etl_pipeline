@@ -1,0 +1,23 @@
+Transaction_ID,Date,Customer_Name,Product,Price,Quantity
+101,2026-07-01,alice smith,Laptop,1200.00,1
+102,2026-07-01,bob jones,Mouse,25.50,2
+102,2026-07-01,bob jones,Mouse,25.50,2
+103,2026-07-01,,Keyboard,45.00,1
+104,2026-07-02,charlie brown,Monitor,,1
+105,2026-07-02,david miller,Headphones,80.00,
+106,2026-07-02,emma watson,USB Drive,15.00,5
+107,2026-07-02,frank castle,Webcam,65.00,2
+108,2026-07-02,grace hopper,RAM 16GB,90.00,2
+109,2026-07-03,henry cavill,SSD 1TB,110.00,1
+109,2026-07-03,henry cavill,SSD 1TB,110.00,1
+110,2026-07-03,irene adler,Graphics Card,450.00,1
+111,2026-07-03,jack sparrow,External HD,85.00,2
+112,2026-07-03,kate winslet,Router,60.00,1
+113,2026-07-03,leo dicaprio,Power Bank,30.00,3
+114,2026-07-03,mary jane,Phone Case,15.00,4
+115,2026-07-03,nathan drake,HDMI Cable,10.00,10
+116,2026-07-03,olivia wilde,Charging Pad,20.00,2
+117,2026-07-03,peter parker,Desk Lamp,35.00,1
+118,2026-07-03,quentin tarantino,Office Chair,180.00,1
+119,2026-07-03,rachel green,Notebook,5.00,12
+120,2026-07-03,steve rogers,Backpack,50.00,2

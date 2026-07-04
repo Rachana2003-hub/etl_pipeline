@@ -1,0 +1,283 @@
+2026-07-03 20:26:33,494 [INFO] --- Extraction Phase Started ---
+2026-07-03 20:26:33,494 [INFO] Reading data from data\sales.csv
+2026-07-03 20:26:33,502 [INFO] Successfully extracted 22 records.
+2026-07-03 20:26:33,511 [INFO] --- Transformation Phase Started ---
+2026-07-03 20:26:33,521 [INFO] Removed 2 duplicate records. Row count reduced from 22 to 20.
+2026-07-03 20:26:33,522 [INFO] Handled 1 missing customer names (replaced with 'UNKNOWN').
+2026-07-03 20:26:33,523 [INFO] Handled 1 missing prices (replaced with 0.0).
+2026-07-03 20:26:33,524 [INFO] Handled 1 missing quantities (replaced with 0).
+2026-07-03 20:26:33,524 [INFO] Converted customer names to uppercase.
+2026-07-03 20:26:33,525 [INFO] Calculated 'Total' column as Price * Quantity.
+2026-07-03 20:26:33,525 [INFO] Transformation phase completed successfully.
+2026-07-03 20:42:13,264 [INFO] --- Extraction Phase Started ---
+2026-07-03 20:42:13,265 [INFO] Reading data from data\sales.csv
+2026-07-03 20:42:13,269 [INFO] Successfully extracted 22 records.
+2026-07-03 20:42:13,289 [INFO] --- Transformation Phase Started ---
+2026-07-03 20:42:13,291 [INFO] Removed 2 duplicate records. Row count reduced from 22 to 20.
+2026-07-03 20:42:13,293 [INFO] Handled 1 missing customer names (replaced with 'UNKNOWN').
+2026-07-03 20:42:13,294 [INFO] Handled 1 missing prices (replaced with 0.0).
+2026-07-03 20:42:13,295 [INFO] Handled 1 missing quantities (replaced with 0).
+2026-07-03 20:42:13,296 [INFO] Converted customer names to uppercase.
+2026-07-03 20:42:13,297 [INFO] Calculated 'Total' column as Price * Quantity.
+2026-07-03 20:42:13,297 [INFO] Transformation phase completed successfully.
+2026-07-03 20:43:08,850 [INFO] =========================================
+2026-07-03 20:43:08,850 [INFO] ETL Pipeline Execution Initiated
+2026-07-03 20:43:08,851 [INFO] =========================================
+2026-07-03 20:43:08,851 [INFO] --- Extraction Phase Started ---
+2026-07-03 20:43:08,851 [INFO] Reading data from data\sales.csv
+2026-07-03 20:43:08,854 [INFO] Successfully extracted 22 records.
+2026-07-03 20:43:08,854 [INFO] --- Transformation Phase Started ---
+2026-07-03 20:43:08,855 [INFO] Removed 2 duplicate records. Row count reduced from 22 to 20.
+2026-07-03 20:43:08,856 [INFO] Handled 1 missing customer names (replaced with 'UNKNOWN').
+2026-07-03 20:43:08,857 [INFO] Handled 1 missing prices (replaced with 0.0).
+2026-07-03 20:43:08,858 [INFO] Handled 1 missing quantities (replaced with 0).
+2026-07-03 20:43:08,858 [INFO] Converted customer names to uppercase.
+2026-07-03 20:43:08,859 [INFO] Calculated 'Total' column as Price * Quantity.
+2026-07-03 20:43:08,859 [INFO] Transformation phase completed successfully.
+2026-07-03 20:43:08,860 [INFO] --- Loading Phase Started ---
+2026-07-03 20:43:08,860 [INFO] Connecting to MySQL server to check/create database: etl_db
+2026-07-03 20:43:09,105 [ERROR] Database loading failed (SQLAlchemy error): (pymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 20:43:09,106 [ERROR] =========================================
+2026-07-03 20:43:09,106 [ERROR] ETL Pipeline execution failed: (pymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 20:43:09,106 [ERROR] =========================================
+2026-07-03 20:49:53,575 [INFO] =========================================
+2026-07-03 20:49:53,576 [INFO] ETL Pipeline Execution Initiated
+2026-07-03 20:49:53,577 [INFO] =========================================
+2026-07-03 20:49:53,578 [INFO] --- Extraction Phase Started ---
+2026-07-03 20:49:53,578 [INFO] Reading data from data\sales.csv
+2026-07-03 20:49:53,586 [INFO] Successfully extracted 22 records.
+2026-07-03 20:49:53,586 [INFO] --- Transformation Phase Started ---
+2026-07-03 20:49:53,590 [INFO] Removed 2 duplicate records. Row count reduced from 22 to 20.
+2026-07-03 20:49:53,592 [INFO] Handled 1 missing customer names (replaced with 'UNKNOWN').
+2026-07-03 20:49:53,594 [INFO] Handled 1 missing prices (replaced with 0.0).
+2026-07-03 20:49:53,596 [INFO] Handled 1 missing quantities (replaced with 0).
+2026-07-03 20:49:53,597 [INFO] Converted customer names to uppercase.
+2026-07-03 20:49:53,599 [INFO] Calculated 'Total' column as Price * Quantity.
+2026-07-03 20:49:53,600 [INFO] Transformation phase completed successfully.
+2026-07-03 20:49:53,600 [INFO] --- Loading Phase Started ---
+2026-07-03 20:49:53,601 [INFO] Connecting to MySQL server to check/create database: etl_db
+2026-07-03 20:49:53,803 [ERROR] Database loading failed (SQLAlchemy error): (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '03@localhost' ([Errno 11003] getaddrinfo failed)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 20:49:53,803 [ERROR] =========================================
+2026-07-03 20:49:53,804 [ERROR] ETL Pipeline execution failed: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '03@localhost' ([Errno 11003] getaddrinfo failed)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 20:49:53,804 [ERROR] =========================================
+2026-07-03 20:53:24,830 [INFO] =========================================
+2026-07-03 20:53:24,831 [INFO] ETL Pipeline Execution Initiated
+2026-07-03 20:53:24,832 [INFO] =========================================
+2026-07-03 20:53:24,832 [INFO] --- Extraction Phase Started ---
+2026-07-03 20:53:24,833 [INFO] Reading data from data\sales.csv
+2026-07-03 20:53:24,838 [INFO] Successfully extracted 22 records.
+2026-07-03 20:53:24,838 [INFO] --- Transformation Phase Started ---
+2026-07-03 20:53:24,841 [INFO] Removed 2 duplicate records. Row count reduced from 22 to 20.
+2026-07-03 20:53:24,841 [INFO] Handled 1 missing customer names (replaced with 'UNKNOWN').
+2026-07-03 20:53:24,842 [INFO] Handled 1 missing prices (replaced with 0.0).
+2026-07-03 20:53:24,843 [INFO] Handled 1 missing quantities (replaced with 0).
+2026-07-03 20:53:24,844 [INFO] Converted customer names to uppercase.
+2026-07-03 20:53:24,845 [INFO] Calculated 'Total' column as Price * Quantity.
+2026-07-03 20:53:24,845 [INFO] Transformation phase completed successfully.
+2026-07-03 20:53:24,845 [INFO] --- Loading Phase Started ---
+2026-07-03 20:53:24,846 [ERROR] Loading failed due to an unexpected error: 'URL' object has no attribute 'rsplit'
+2026-07-03 20:53:24,846 [ERROR] =========================================
+2026-07-03 20:53:24,846 [ERROR] ETL Pipeline execution failed: 'URL' object has no attribute 'rsplit'
+2026-07-03 20:53:24,846 [ERROR] =========================================
+2026-07-03 20:54:27,614 [INFO] =========================================
+2026-07-03 20:54:27,614 [INFO] ETL Pipeline Execution Initiated
+2026-07-03 20:54:27,614 [INFO] =========================================
+2026-07-03 20:54:27,614 [INFO] --- Extraction Phase Started ---
+2026-07-03 20:54:27,614 [INFO] Reading data from data\sales.csv
+2026-07-03 20:54:27,618 [INFO] Successfully extracted 22 records.
+2026-07-03 20:54:27,618 [INFO] --- Transformation Phase Started ---
+2026-07-03 20:54:27,620 [INFO] Removed 2 duplicate records. Row count reduced from 22 to 20.
+2026-07-03 20:54:27,620 [INFO] Handled 1 missing customer names (replaced with 'UNKNOWN').
+2026-07-03 20:54:27,622 [INFO] Handled 1 missing prices (replaced with 0.0).
+2026-07-03 20:54:27,622 [INFO] Handled 1 missing quantities (replaced with 0).
+2026-07-03 20:54:27,624 [INFO] Converted customer names to uppercase.
+2026-07-03 20:54:27,625 [INFO] Calculated 'Total' column as Price * Quantity.
+2026-07-03 20:54:27,625 [INFO] Transformation phase completed successfully.
+2026-07-03 20:54:27,626 [INFO] --- Loading Phase Started ---
+2026-07-03 20:54:27,626 [INFO] Connecting to MySQL server to check/create database: etl_db
+2026-07-03 20:54:27,817 [INFO] Database 'etl_db' verified/created successfully.
+2026-07-03 20:54:27,817 [INFO] Loading transformed data to table 'sales_transformed'
+2026-07-03 20:54:28,055 [INFO] Successfully loaded 20 records into 'etl_db.sales_transformed' table.
+2026-07-03 20:54:28,055 [INFO] =========================================
+2026-07-03 20:54:28,055 [INFO] ETL Pipeline Executed Successfully!
+2026-07-03 20:54:28,056 [INFO] =========================================
+2026-07-03 21:20:13,436 [INFO] --- Extraction Phase Started ---
+2026-07-03 21:20:13,436 [INFO] Reading data from data\sales.csv
+2026-07-03 21:20:13,440 [INFO] Successfully extracted 22 records.
+2026-07-03 21:20:13,455 [INFO] --- Transformation Phase Started ---
+2026-07-03 21:20:13,459 [INFO] Removed 2 duplicate records. Row count reduced from 22 to 20.
+2026-07-03 21:20:13,461 [INFO] Handled 1 missing customer names (replaced with 'UNKNOWN').
+2026-07-03 21:20:13,463 [INFO] Handled 1 missing prices (replaced with 0.0).
+2026-07-03 21:20:13,464 [INFO] Handled 1 missing quantities (replaced with 0).
+2026-07-03 21:20:13,464 [INFO] Converted customer names to uppercase.
+2026-07-03 21:20:13,465 [INFO] Calculated 'Total' column as Price * Quantity.
+2026-07-03 21:20:13,465 [INFO] Transformation phase completed successfully.
+2026-07-03 21:20:26,475 [INFO] =========================================
+2026-07-03 21:20:26,476 [INFO] ETL Pipeline Execution Initiated
+2026-07-03 21:20:26,476 [INFO] =========================================
+2026-07-03 21:20:26,476 [INFO] --- Extraction Phase Started ---
+2026-07-03 21:20:26,476 [INFO] Reading data from data\sales.csv
+2026-07-03 21:20:26,480 [INFO] Successfully extracted 22 records.
+2026-07-03 21:20:26,480 [INFO] --- Transformation Phase Started ---
+2026-07-03 21:20:26,482 [INFO] Removed 2 duplicate records. Row count reduced from 22 to 20.
+2026-07-03 21:20:26,483 [INFO] Handled 1 missing customer names (replaced with 'UNKNOWN').
+2026-07-03 21:20:26,483 [INFO] Handled 1 missing prices (replaced with 0.0).
+2026-07-03 21:20:26,484 [INFO] Handled 1 missing quantities (replaced with 0).
+2026-07-03 21:20:26,485 [INFO] Converted customer names to uppercase.
+2026-07-03 21:20:26,486 [INFO] Calculated 'Total' column as Price * Quantity.
+2026-07-03 21:20:26,486 [INFO] Transformation phase completed successfully.
+2026-07-03 21:20:26,486 [INFO] --- Loading Phase Started ---
+2026-07-03 21:20:26,486 [INFO] Connecting to MySQL server to check/create database: etl_db
+2026-07-03 21:20:26,615 [INFO] Database 'etl_db' verified/created successfully.
+2026-07-03 21:20:26,615 [INFO] Loading transformed data to table 'sales_transformed'
+2026-07-03 21:20:26,707 [INFO] Successfully loaded 20 records into 'etl_db.sales_transformed' table.
+2026-07-03 21:20:26,707 [INFO] =========================================
+2026-07-03 21:20:26,707 [INFO] ETL Pipeline Executed Successfully!
+2026-07-03 21:20:26,708 [INFO] =========================================
+2026-07-03 21:47:07,943 [INFO] --- Extraction Phase Started ---
+2026-07-03 21:47:07,944 [INFO] Reading data from data\sales.csv
+2026-07-03 21:47:07,952 [INFO] Successfully extracted 22 records.
+2026-07-03 21:47:07,971 [INFO] --- Transformation Phase Started ---
+2026-07-03 21:47:07,977 [INFO] Removed 2 duplicate records. Row count reduced from 22 to 20.
+2026-07-03 21:47:07,978 [INFO] Handled 1 missing customer names (replaced with 'UNKNOWN').
+2026-07-03 21:47:07,978 [INFO] Handled 1 missing prices (replaced with 0.0).
+2026-07-03 21:47:07,979 [INFO] Handled 1 missing quantities (replaced with 0).
+2026-07-03 21:47:07,981 [INFO] Converted customer names to uppercase.
+2026-07-03 21:47:07,982 [INFO] Calculated 'Total' column as Price * Quantity.
+2026-07-03 21:47:07,982 [INFO] Transformation phase completed successfully.
+2026-07-03 21:47:18,404 [INFO] =========================================
+2026-07-03 21:47:18,405 [INFO] ETL Pipeline Execution Initiated
+2026-07-03 21:47:18,405 [INFO] =========================================
+2026-07-03 21:47:18,405 [INFO] --- Extraction Phase Started ---
+2026-07-03 21:47:18,405 [INFO] Reading data from data\sales.csv
+2026-07-03 21:47:18,410 [INFO] Successfully extracted 22 records.
+2026-07-03 21:47:18,410 [INFO] --- Transformation Phase Started ---
+2026-07-03 21:47:18,414 [INFO] Removed 2 duplicate records. Row count reduced from 22 to 20.
+2026-07-03 21:47:18,416 [INFO] Handled 1 missing customer names (replaced with 'UNKNOWN').
+2026-07-03 21:47:18,417 [INFO] Handled 1 missing prices (replaced with 0.0).
+2026-07-03 21:47:18,418 [INFO] Handled 1 missing quantities (replaced with 0).
+2026-07-03 21:47:18,420 [INFO] Converted customer names to uppercase.
+2026-07-03 21:47:18,421 [INFO] Calculated 'Total' column as Price * Quantity.
+2026-07-03 21:47:18,422 [INFO] Transformation phase completed successfully.
+2026-07-03 21:47:18,422 [INFO] --- Loading Phase Started ---
+2026-07-03 21:47:18,422 [INFO] Connecting to MySQL server to check/create database: etl_db
+2026-07-03 21:47:18,793 [INFO] Database 'etl_db' verified/created successfully.
+2026-07-03 21:47:18,793 [INFO] Loading transformed data to table 'sales_transformed'
+2026-07-03 21:47:19,051 [INFO] Successfully loaded 20 records into 'etl_db.sales_transformed' table.
+2026-07-03 21:47:19,051 [INFO] =========================================
+2026-07-03 21:47:19,052 [INFO] ETL Pipeline Executed Successfully!
+2026-07-03 21:47:19,052 [INFO] =========================================
+2026-07-03 17:08:16,997 [INFO] =========================================
+2026-07-03 17:08:16,998 [INFO] ETL Pipeline Execution Initiated
+2026-07-03 17:08:16,999 [INFO] =========================================
+2026-07-03 17:08:17,002 [INFO] --- Extraction Phase Started ---
+2026-07-03 17:08:17,004 [INFO] Reading data from data/sales.csv
+2026-07-03 17:08:17,007 [INFO] Successfully extracted 22 records.
+2026-07-03 17:08:17,008 [INFO] --- Transformation Phase Started ---
+2026-07-03 17:08:17,010 [INFO] Removed 2 duplicate records. Row count reduced from 22 to 20.
+2026-07-03 17:08:17,013 [INFO] Handled 1 missing customer names (replaced with 'UNKNOWN').
+2026-07-03 17:08:17,014 [INFO] Handled 1 missing prices (replaced with 0.0).
+2026-07-03 17:08:17,016 [INFO] Handled 1 missing quantities (replaced with 0).
+2026-07-03 17:08:17,020 [INFO] Converted customer names to uppercase.
+2026-07-03 17:08:17,022 [INFO] Calculated 'Total' column as Price * Quantity.
+2026-07-03 17:08:17,023 [INFO] Transformation phase completed successfully.
+2026-07-03 17:08:17,024 [INFO] --- Loading Phase Started ---
+2026-07-03 17:08:17,025 [INFO] Connecting to MySQL server to check/create database: etl_db
+2026-07-03 17:08:17,146 [ERROR] Database loading failed (SQLAlchemy error): (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 17:08:17,148 [ERROR] =========================================
+2026-07-03 17:08:17,148 [ERROR] ETL Pipeline execution failed: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 17:08:17,149 [ERROR] =========================================
+2026-07-03 17:08:18,263 [INFO] =========================================
+2026-07-03 17:08:18,265 [INFO] ETL Pipeline Execution Initiated
+2026-07-03 17:08:18,268 [INFO] =========================================
+2026-07-03 17:08:18,270 [INFO] --- Extraction Phase Started ---
+2026-07-03 17:08:18,271 [INFO] Reading data from data/sales.csv
+2026-07-03 17:08:18,273 [INFO] Successfully extracted 22 records.
+2026-07-03 17:08:18,274 [INFO] --- Transformation Phase Started ---
+2026-07-03 17:08:18,276 [INFO] Removed 2 duplicate records. Row count reduced from 22 to 20.
+2026-07-03 17:08:18,278 [INFO] Handled 1 missing customer names (replaced with 'UNKNOWN').
+2026-07-03 17:08:18,279 [INFO] Handled 1 missing prices (replaced with 0.0).
+2026-07-03 17:08:18,280 [INFO] Handled 1 missing quantities (replaced with 0).
+2026-07-03 17:08:18,281 [INFO] Converted customer names to uppercase.
+2026-07-03 17:08:18,283 [INFO] Calculated 'Total' column as Price * Quantity.
+2026-07-03 17:08:18,285 [INFO] Transformation phase completed successfully.
+2026-07-03 17:08:18,286 [INFO] --- Loading Phase Started ---
+2026-07-03 17:08:18,287 [INFO] Connecting to MySQL server to check/create database: etl_db
+2026-07-03 17:08:18,336 [ERROR] Database loading failed (SQLAlchemy error): (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 17:08:18,338 [ERROR] =========================================
+2026-07-03 17:08:18,339 [ERROR] ETL Pipeline execution failed: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 17:08:18,340 [ERROR] =========================================
+2026-07-03 17:08:19,427 [INFO] =========================================
+2026-07-03 17:08:19,429 [INFO] ETL Pipeline Execution Initiated
+2026-07-03 17:08:19,430 [INFO] =========================================
+2026-07-03 17:08:19,432 [INFO] --- Extraction Phase Started ---
+2026-07-03 17:08:19,435 [INFO] Reading data from data/sales.csv
+2026-07-03 17:08:19,437 [INFO] Successfully extracted 22 records.
+2026-07-03 17:08:19,438 [INFO] --- Transformation Phase Started ---
+2026-07-03 17:08:19,440 [INFO] Removed 2 duplicate records. Row count reduced from 22 to 20.
+2026-07-03 17:08:19,442 [INFO] Handled 1 missing customer names (replaced with 'UNKNOWN').
+2026-07-03 17:08:19,443 [INFO] Handled 1 missing prices (replaced with 0.0).
+2026-07-03 17:08:19,444 [INFO] Handled 1 missing quantities (replaced with 0).
+2026-07-03 17:08:19,445 [INFO] Converted customer names to uppercase.
+2026-07-03 17:08:19,446 [INFO] Calculated 'Total' column as Price * Quantity.
+2026-07-03 17:08:19,447 [INFO] Transformation phase completed successfully.
+2026-07-03 17:08:19,448 [INFO] --- Loading Phase Started ---
+2026-07-03 17:08:19,448 [INFO] Connecting to MySQL server to check/create database: etl_db
+2026-07-03 17:08:19,498 [ERROR] Database loading failed (SQLAlchemy error): (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 17:08:19,499 [ERROR] =========================================
+2026-07-03 17:08:19,503 [ERROR] ETL Pipeline execution failed: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 17:08:19,504 [ERROR] =========================================
+2026-07-03 17:08:20,882 [INFO] =========================================
+2026-07-03 17:08:20,883 [INFO] ETL Pipeline Execution Initiated
+2026-07-03 17:08:20,885 [INFO] =========================================
+2026-07-03 17:08:20,886 [INFO] --- Extraction Phase Started ---
+2026-07-03 17:08:20,888 [INFO] Reading data from data/sales.csv
+2026-07-03 17:08:20,890 [INFO] Successfully extracted 22 records.
+2026-07-03 17:08:20,891 [INFO] --- Transformation Phase Started ---
+2026-07-03 17:08:20,895 [INFO] Removed 2 duplicate records. Row count reduced from 22 to 20.
+2026-07-03 17:08:20,898 [INFO] Handled 1 missing customer names (replaced with 'UNKNOWN').
+2026-07-03 17:08:20,901 [INFO] Handled 1 missing prices (replaced with 0.0).
+2026-07-03 17:08:20,904 [INFO] Handled 1 missing quantities (replaced with 0).
+2026-07-03 17:08:20,906 [INFO] Converted customer names to uppercase.
+2026-07-03 17:08:20,907 [INFO] Calculated 'Total' column as Price * Quantity.
+2026-07-03 17:08:20,908 [INFO] Transformation phase completed successfully.
+2026-07-03 17:08:20,909 [INFO] --- Loading Phase Started ---
+2026-07-03 17:08:20,909 [INFO] Connecting to MySQL server to check/create database: etl_db
+2026-07-03 17:08:20,963 [INFO] Database 'etl_db' verified/created successfully.
+2026-07-03 17:08:20,964 [INFO] Loading transformed data to table 'sales_transformed'
+2026-07-03 17:08:21,021 [INFO] Successfully loaded 20 records into 'etl_db.sales_transformed' table.
+2026-07-03 17:08:21,022 [INFO] =========================================
+2026-07-03 17:08:21,023 [INFO] ETL Pipeline Executed Successfully!
+2026-07-03 17:08:21,024 [INFO] =========================================
+2026-07-03 22:43:59,260 [INFO] =========================================
+2026-07-03 22:43:59,261 [INFO] ETL Pipeline Execution Initiated
+2026-07-03 22:43:59,261 [INFO] =========================================
+2026-07-03 22:43:59,261 [INFO] --- Extraction Phase Started ---
+2026-07-03 22:43:59,261 [INFO] Reading data from data\sales.csv
+2026-07-03 22:43:59,266 [INFO] Successfully extracted 22 records.
+2026-07-03 22:43:59,266 [INFO] --- Transformation Phase Started ---
+2026-07-03 22:43:59,275 [INFO] Removed 2 duplicate records. Row count reduced from 22 to 20.
+2026-07-03 22:43:59,277 [INFO] Handled 1 missing customer names (replaced with 'UNKNOWN').
+2026-07-03 22:43:59,278 [INFO] Handled 1 missing prices (replaced with 0.0).
+2026-07-03 22:43:59,279 [INFO] Handled 1 missing quantities (replaced with 0).
+2026-07-03 22:43:59,280 [INFO] Converted customer names to uppercase.
+2026-07-03 22:43:59,281 [INFO] Calculated 'Total' column as Price * Quantity.
+2026-07-03 22:43:59,281 [INFO] Transformation phase completed successfully.
+2026-07-03 22:43:59,281 [INFO] --- Loading Phase Started ---
+2026-07-03 22:43:59,281 [INFO] Connecting to MySQL server to check/create database: etl_db
+2026-07-03 22:43:59,607 [INFO] Database 'etl_db' verified/created successfully.
+2026-07-03 22:43:59,607 [INFO] Loading transformed data to table 'sales_transformed'
+2026-07-03 22:43:59,922 [INFO] Successfully loaded 20 records into 'etl_db.sales_transformed' table.
+2026-07-03 22:43:59,922 [INFO] =========================================
+2026-07-03 22:43:59,922 [INFO] ETL Pipeline Executed Successfully!
+2026-07-03 22:43:59,922 [INFO] =========================================

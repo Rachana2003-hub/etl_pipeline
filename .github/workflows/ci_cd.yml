@@ -1,0 +1,61 @@
+name: Python ETL Pipeline CI/CD
+
+on:
+  push:
+    branches: [ "main", "master", "develop" ]
+  pull_request:
+    branches: [ "main", "master", "develop" ]
+  workflow_dispatch:
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+        cache: "pip"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install -r requirements-dev.txt
+
+    - name: Lint and Format check with Ruff
+      run: |
+        ruff check .
+        ruff format --check .
+
+    - name: Run unit tests with pytest and coverage
+      run: |
+        pytest --cov=. --cov-report=term-missing --cov-report=xml tests/
+
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v4
+      with:
+        name: coverage-report
+        path: coverage.xml
+        if-no-files-found: ignore
+
+  build-docker:
+    needs: lint-and-test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Docker Buildx
+      uses: actions/setup-docker-action@v4
+      continue-on-error: true # Keep build resilient if runner lacks Docker
+
+    - name: Build Docker image
+      run: |
+        docker build -t etl-pipeline:${{ github.sha }} .
+        docker tag etl-pipeline:${{ github.sha }} etl-pipeline:latest
