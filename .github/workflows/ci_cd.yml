@@ -35,18 +35,19 @@ jobs:
           echo "PYTHONPATH=${GITHUB_WORKSPACE}" >> $GITHUB_ENV
 
       - name: Lint Code
-        run: ruff check .
+        run: |
+          ruff check .
 
       - name: Check Formatting
-        run: ruff format --check .
+        run: |
+          ruff format --check .
 
       - name: Run Tests
         run: |
           pytest tests/ --cov=. --cov-report=xml
 
-  build-docker:
+  build-and-deploy:
     needs: lint-and-test
-
     runs-on: ubuntu-latest
 
     steps:
@@ -59,3 +60,24 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -t etl-pipeline:latest .
+
+      - name: Start Docker Compose
+        run: |
+          docker compose up -d
+
+      - name: Wait for MySQL
+        run: |
+          sleep 30
+
+      - name: Check Running Containers
+        run: |
+          docker ps
+
+      - name: Verify ETL Pipeline
+        run: |
+          python verify_etl.py
+
+      - name: Stop Docker Containers
+        if: always()
+        run: |
+          docker compose down
