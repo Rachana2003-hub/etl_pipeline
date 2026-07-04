@@ -23,7 +23,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
 # Copy source code and data
-COPY config.py etl_pipeline.py ./
+COPY config.py etl_pipeline.py verify_etl.py ./
 COPY data/ ./data/
 
 # Create logs directory and set permissions for our non-root user
