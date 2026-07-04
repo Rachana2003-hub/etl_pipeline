@@ -2,60 +2,60 @@ name: Python ETL Pipeline CI/CD
 
 on:
   push:
-    branches: [ "main", "master", "develop" ]
+    branches:
+      - main
+
   pull_request:
-    branches: [ "main", "master", "develop" ]
+    branches:
+      - main
+
   workflow_dispatch:
 
 jobs:
   lint-and-test:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-    - name: Set up Python 3.11
-      uses: actions/setup-python@v5
-      with:
-        python-version: "3.11"
-        cache: "pip"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        pip install -r requirements-dev.txt
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -r requirements-dev.txt
 
-    - name: Lint and Format check with Ruff
-      run: |
-        ruff check .
-        ruff format --check .
+      - name: Set PYTHONPATH
+        run: |
+          echo "PYTHONPATH=${GITHUB_WORKSPACE}" >> $GITHUB_ENV
 
-    - name: Run unit tests with pytest and coverage
-      run: |
-        pytest --cov=. --cov-report=term-missing --cov-report=xml tests/
+      - name: Lint Code
+        run: ruff check .
 
-    - name: Upload coverage report
-      uses: actions/upload-artifact@v4
-      with:
-        name: coverage-report
-        path: coverage.xml
-        if-no-files-found: ignore
+      - name: Check Formatting
+        run: ruff format --check .
+
+      - name: Run Tests
+        run: |
+          pytest tests/ --cov=. --cov-report=xml
 
   build-docker:
     needs: lint-and-test
+
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-    - name: Set up Docker Buildx
-      uses: actions/setup-docker-action@v4
-      continue-on-error: true # Keep build resilient if runner lacks Docker
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
 
-    - name: Build Docker image
-      run: |
-        docker build -t etl-pipeline:${{ github.sha }} .
-        docker tag etl-pipeline:${{ github.sha }} etl-pipeline:latest
+      - name: Build Docker Image
+        run: |
+          docker build -t etl-pipeline:latest .
